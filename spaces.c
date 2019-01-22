@@ -25,7 +25,7 @@ int main() {
         FILE *fp2 = fopen("newfile.c", "w+");
         if(fp2!=NULL) {
             for(int i=0;i<strlen(newString);i++) {
-                putc(newString[i], fp2);
+                fputc(newString[i], fp2);
             }
         }
     }
