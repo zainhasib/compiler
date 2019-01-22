@@ -18,12 +18,11 @@ int main() {
         if(output[i]=='/' && output[i+1]=='*') {
             i+=2;
             stop=1;
-            u+=sprintf(filterOutput+u, "\n");
         }else if(output[i]=='*' && output[i+1]=='/') {
             stop=0;
             i+=2;
         }
-        if(stop==1) {
+        if(stop==0) {
             u+=sprintf(filterOutput+u, "%c", output[i]);
         }
     }
